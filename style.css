@@ -1,0 +1,297 @@
+body {
+  font-family: Arial, sans-serif;
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: white;
+  color: rgb(0, 0, 0);
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px auto;
+  padding: 0 20px;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #40b736;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-right: 20px;
+}
+
+.nav-links a {
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links a:hover {
+  background-color: #40b736;
+  border-radius: 4px;
+  color: white;
+}
+
+.header-image-menu{
+  top: 10px;
+  position: relative;
+}
+
+.header-image-menu img{
+  width: 100%;
+  margin: none;
+  padding: none;
+}
+
+.about {
+  background: rgb(224, 251, 222);
+  background: linear-gradient(360deg, rgb(245, 255, 245) 0%, rgb(173, 252, 163) 100%);
+  padding: 100px 0 20px 0;
+  text-align: center;
+}
+
+.about h1 {
+  color: black;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1rem;
+  color: #323030;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-info {
+  margin: 2rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.about-img {
+  width: 50rem;
+  height: 50rem;
+
+}
+
+.about-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: contain;
+}
+
+.about-info p {
+  font-size: 1.3rem;
+  margin: 0 2rem;
+  text-align: justify;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.spots-info {
+  background: linear-gradient(360deg, rgb(87, 86, 86) 0%, rgb(229, 39, 247) 100%);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  padding: 100px 0 20px 0;
+  text-align: center;
+}
+
+.spots-info h1 {
+  color: white;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.spots {
+  background: linear-gradient(360deg, rgb(158, 154, 154) 0%, rgb(87, 86, 86) 100%);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.image {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+  margin: 10px;
+  width: 300px;
+  box-sizing: border-box;
+  opacity: 0.5;
+}
+
+.image:hover{ 
+  opacity: 1.0;
+  background-color: #36F57F;
+}
+
+.image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.gallery {
+  --s: 110px;
+  cursor: pointer;
+  display: grid;
+  gap: 5px;
+  position: relative;
+  place-content: center;
+}
+
+.gallery input {
+  position: absolute;
+  z-index: 1;
+  border-radius: 50%;
+  inset: calc(50% - var(--s)/3);
+  cursor: pointer;
+  --g: linear-gradient(#fff 0 0) no-repeat;
+  background: var(--g) 50%/60% 3px,var(--g) 50%/3px 60%,#222;
+  transition: 1.5s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.gallery > img {
+  width: var(--s);
+  aspect-ratio: 1;
+  grid-area: 1/1;
+  border-radius: 50%;
+  object-fit: cover;
+  transform: scale(.5);
+  transition: 1s calc((var(--i) - 1)*.1s);
+}
+
+.gallery > img:nth-of-type(1) {--i:4;}
+.gallery > img:nth-of-type(2) {--i:2;}
+.gallery > img:nth-of-type(3) {--i:3;}
+
+.gallery > input:checked ~ img {
+  transform: 
+  rotate(calc(var(--i)* 360deg/4)) translate(calc(1.5*var(--s))) 
+  rotate(calc(var(--i)*-360deg/4));
+}
+
+.gallery > input:checked {
+  transform: rotate(135deg)
+}
+
+.left{
+  float: left;
+  margin-right: 20px;
+  height: 70px;
+  width: 70px;
+}
+
+.right{
+  float: right;
+  margin-left: 20px;
+  height: 70px;
+  width: 70px;
+}
+
+footer {
+  background-image: linear-gradient(to bottom right, blue, black, #36F57F);
+  color: #fff;
+  padding: 1em;
+  text-align: center;
+  overflow: hidden;
+}
+
+footer a{
+  color: white;
+  font-size: 20px;
+}
+
+footer a.one:hover{
+  background-color: #36F57F;
+}
+
+footer a.two:hover{
+  background-color: black;
+}
+
+footer a.three:hover{
+  background-color: blue;
+}
+
+footer a.four:hover{
+  background-color: rgb(255, 17, 0);
+}
+
+footer a.five:hover{
+  background-color: rgb(0, 162, 255);
+}
+
+@media (max-width: 768px) {
+  nav {
+      display: block;
+  }
+
+  .logo, .image {
+      text-align: center;
+  }
+
+  .nav-links {
+      margin-top: 1rem;
+      justify-content: space-between;
+  }
+
+  .nav-links li {
+      margin-right: 0;
+  }
+
+  .about, .spots-info h1 {
+      font-size: 2rem;
+  }
+
+  .about, .spots p {
+      font-size: 0.9rem;
+  }
+
+  .about-info {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .about-img, .image {
+      width: 60%;
+      height: 60%;
+      margin-bottom: 1rem;
+  }
+
+  .about-info, .image p {
+      margin: 1rem 2rem;
+  }
+}
